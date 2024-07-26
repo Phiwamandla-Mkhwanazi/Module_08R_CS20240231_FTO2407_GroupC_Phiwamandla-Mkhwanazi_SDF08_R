@@ -4,48 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer Example</title>
+    <!--Tailwind Utility Class-->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root
+        {
+            --bg-color: #659f8f;
+            --style-color: #d86943;
+            --text-color: #313131;
+        }
+    </style>
 </head>
 <body>
-    <footer class="bg-[#659f8f] dark:bg-[#313131]">
+    <!--Dark Mode and Light Mode effects have been removed.-->
+    <footer class="bg-[var(--bg-color)]">
         <div class="container">
-            <footer class="bg-[#659f8f] dark:bg-[#313131]">
+            <footer class="bg-[var(--bg-color)]]">
                 <div class="container px-6 py-12 mx-auto">
                     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
                         <div class="sm:col-span-2">
-                            <h1 class="max-w-lg" >Subscribe.</h1>
-                            <div class="flex">
-                                <input id="email" type="text">
-                                <button class="w-full px-6 py-2.5 bg-white">
+                            <h1 class="max-w-lg text-base font-semibold tracking-tight text-[var(--text-color)] xl:text-base" >Subscribe to our newsletters for updates.</h1>
+                            <div class="flex flex-col mx-auto mt-6  space-y-3 md:space-x-3 md:space-y-0 md:flex-row">
+                                <input id="email" type="text" placeholder="Email Address" class="px-4 py-2 text-[var(--text-color)] bg-white border-0 rounded-md focus:border-[var(--style-color)] focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-[#d86943]">
+                                <!--I had a challenge using the w-ratios e.g w-1/2 w-1/4 hence i used pixels, to resize my width-and applying some margin -->
+                                <!--wmin came to the rescue along with some padding of 1em-->
+                                <button type="button" class="md:w-min p-4 py-2.5 bg-[var(--style-color)] text-white font-normal border-0 rounded-md  transition-opacity duration-300 hover:opacity-80"> 
                                     Subscribe
-                                </button>
+                                </button >                              
                             </div>
                         </div>
                         <div>
-                            <p class="text-[#313131]">Quick Link</p>
-                            <div class="flex">
-                                <a href="#">Home</a>
-                                <a href="#">Who We Are</a>
-                                <a href="#">Our Philosophy</a>
+                            <p class="text-[var(--text-color)] font-normal">Quick Link</p>
+                            <div class="flex flex-col font-thin py-4 leading-8">
+                                <a href="#home" class="hover:underline">Home</a>
+                                <a href="#whoweara" class="hover:underline">Who We Are</a>
+                                <a href="#philosophy" class="hover:underline">Our Philosophy</a>
                             </div>
                         </div>
                         <div>
-                            <p class="text-[#313131]">Technologies</p>
-                            <div class="">
-                                <a href="#">HTML</a>
-                                <a href="#">CSS</a>
-                                <a href="#">JavaScript</a>
+                            <p class="text-[var(--text-color)] font-normal">Technologies</p>
+                            <div class="flex flex-col font-thin py-4 leading-8">
+                                <a href="#html" class="hover:underline">HTML</a>
+                                <a href="#css"class="hover:underline">CSS</a>
+                                <a href="#js" class="hover:underline">JavaScript</a>
                             </div>
                         </div>
                     </div>
                     
-                    <hr class="my-6 border-[#d86943]">
+                    <hr class="my-6 border-[var(--style-color)]">
                     
-                    <div class="flex">
-                        <a href="#">
+                    <div class="flex items-center justify-between">
+                        <div class="">
+                            <a href="https://www.codespace.co.za/">
                             <img class="w-auto h-7" src="https://codespace-assets.global.ssl.fastly.net/wp/assets/website/codespace-primary-logo-light.svg" alt="">
-                        </a>
+                        </a></div>
+                        <div class=" text-[var(--text-color)]">
+                            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fcodespaceza" class="hover:text-[var(--style-color)]">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/codespaceza/?hl=en" class="hover:text-[var(--style-color)]">
+                                <i class="fab fa-instagram" ></i>
+                            </a>
+                            <a href="https://web.facebook.com/codespaceza/events/?_rdc=1&_rdr" class="hover:text-[var(--style-color)]">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </div>
+                        
+                        
                     </div>
     </footer>
 
