@@ -4,6 +4,9 @@ Create a responsive footer for a website using Tailwind CSS. This project aims t
 
 ![alt text](Footer.png)
 
+## Final Project
+![alt text](Footer_final.png)
+
 ## Objectives
 - Clone the provided starter code.
 - Style the footer using Tailwind CSS.
